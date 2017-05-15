@@ -99,5 +99,9 @@ git init
 git add .
 git commit -m ‘项目目初始化’
 git remote add origin git@github.com:luohoufu/mic.git
+
+
+git pull origin master --allow-unrelated-histories
+git branch --set-upstream-to=origin/master master
 git push -u origin master
 ```
