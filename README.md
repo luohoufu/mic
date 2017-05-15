@@ -104,4 +104,10 @@ git remote add origin git@github.com:luohoufu/mic.git
 git pull origin master --allow-unrelated-histories
 git branch --set-upstream-to=origin/master master
 git push -u origin master
+
+git branch dev
+git checkout dev
+git commit -am '修改README.md配置'
+git push origin dev:dev
+#git push origin :dev 删除分支
 ```
