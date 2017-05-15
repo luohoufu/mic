@@ -29,8 +29,8 @@ rm -rf ./mic
 
 mvn archetype:generate -DgroupId=io.tonny -DartifactId=mic-config-server -Dversion=1.0.0-SNAPSHOT -Dpackage=io.tonny -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeGroupId=org.apache.maven.archetypes  -DinteractiveMode=false -DarchetypeCatalog=local
 
-
-touch .gitignore
+# 设置忽略文件
+touch .gitignore 
 
 ```
 
@@ -105,6 +105,7 @@ git pull origin master --allow-unrelated-histories
 git branch --set-upstream-to=origin/master master
 git push -u origin master
 
+# 创建开发分支
 git branch dev
 git checkout dev
 git commit -am '修改README.md配置'
