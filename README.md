@@ -87,6 +87,11 @@ ssh-keygen -t rsa -C "luohoufu@163.com"
 xclip -selection c  ~/.ssh/id_rsa.pub
 #登录github并访问[SSH and GPG keys](https://github.com/settings/keys),粘贴ssh key.
 
+ssh git@github.com
+#PTY allocation request failed on channel 0
+#Hi luohoufu! You've successfully authenticated, but GitHub does not provide shell access.
+#Connection to github.com closed.
+
 # 访问 [new repository](https://github.com/new)
 # 创建一个空的项目，然后再将本的项目上传，采用MIT协议
 
