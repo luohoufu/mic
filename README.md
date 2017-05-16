@@ -1,5 +1,5 @@
 ## 项目开发过程
-[spring cloud & spring boot](http://projects.spring.io/spring-cloud/#quick-start)
+参考：[spring cloud & spring boot](http://projects.spring.io/spring-cloud/#quick-start)
 
 ## 配置iTerm2 和 Oh-My-Zsh
 
@@ -27,6 +27,7 @@ mvn archetype:generate -DgroupId=io.tonny -DartifactId=mic -Dversion=1.0.0-SNAPS
 mv mic/pom.xml .
 rm -rf ./mic
 
+mvn archetype:generate -DgroupId=io.tonny -DartifactId=mic-registry-server -Dversion=1.0.0-SNAPSHOT -Dpackage=io.tonny -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeGroupId=org.apache.maven.archetypes  -DinteractiveMode=false -DarchetypeCatalog=local
 mvn archetype:generate -DgroupId=io.tonny -DartifactId=mic-config-server -Dversion=1.0.0-SNAPSHOT -Dpackage=io.tonny -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeGroupId=org.apache.maven.archetypes  -DinteractiveMode=false -DarchetypeCatalog=local
 
 # 设置忽略文件
@@ -54,23 +55,22 @@ touch .gitignore
 </dependencyManagement>
 ```
 
-### 个性config-server的pom.xml
+### 个性registry-server的pom.xml
 ``` xml
-<dependencyManagement>
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config</artifactId>
-            <version>1.3.0.RELEASE</version>
-            <type>pom</type>
-            <scope>import</scope>
-        </dependency>
-    </dependencies>
-</dependencyManagement>
 <dependencies>
     <dependency>
         <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-starter-config</artifactId>
+        <artifactId>spring-cloud-eureka-server</artifactId>
+    </dependency>
+</dependencies>
+```
+
+### 个性config-server的pom.xml
+``` xml
+<dependencies>
+    <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-config-server</artifactId>
     </dependency>
 </dependencies>
 ```
