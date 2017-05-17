@@ -1,0 +1,14 @@
+spring:
+  profiles:
+    active: local
+  application:
+    name: mic-portal-service
+  cloud:
+    config:
+      url: http://localhost:9999
+  main:
+    banner-mode: "off"
+  devtools:
+    restart:
+      enabled: false
+      exclude: static/**,public/**

@@ -29,6 +29,7 @@ rm -rf ./mic
 
 mvn archetype:generate -DgroupId=io.tonny -DartifactId=mic-registry-server -Dversion=1.0.0-SNAPSHOT -Dpackage=io.tonny -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeGroupId=org.apache.maven.archetypes  -DinteractiveMode=false -DarchetypeCatalog=local
 mvn archetype:generate -DgroupId=io.tonny -DartifactId=mic-config-server -Dversion=1.0.0-SNAPSHOT -Dpackage=io.tonny -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeGroupId=org.apache.maven.archetypes  -DinteractiveMode=false -DarchetypeCatalog=local
+mvn archetype:generate -DgroupId=io.tonny -DartifactId=mic-portal-service -Dversion=1.0.0-SNAPSHOT -Dpackage=io.tonny -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeGroupId=org.apache.maven.archetypes  -DinteractiveMode=false -DarchetypeCatalog=local
 
 # 设置忽略文件
 touch .gitignore 

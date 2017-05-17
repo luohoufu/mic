@@ -1,8 +1,7 @@
-package io.tonny.config;
+package io.tonny.portal;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.config.server.EnableConfigServer;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
@@ -18,7 +17,6 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  *         和Spring无缝集成（无缝支持Spring里面Environment和PropertySource的接口）
  */
 @SpringBootApplication
-@EnableConfigServer
 @EnableEurekaClient
 public class Application {
 
