@@ -5,6 +5,9 @@ spring:
     name: mic-portal-service
   cloud:
     config:
+      name: mic-portal-service
+      profile: local
+      label: null
       url: http://localhost:9999
   main:
     banner-mode: "off"

@@ -4,6 +4,8 @@ eureka:
   instance:
     hostname: localhost
     instance-id: ${eureka.instance.hostname}:${server.port}
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 2
   client:
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:8888/eureka/ #注册中心地址

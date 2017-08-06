@@ -1,13 +1,11 @@
 spring:
-  profiles:
-    active: native
   application:
     name: mic-config-server
   cloud:
     config:
       server:
-        native:
-          searchLocations: file:///${user.home}/mic/config-repo
+        git:
+          url: file:///${user.home}/mic/config-repo
           searchPaths: '{application}'  #搜索各个以服务名命名的文件夹下的所有yml
   main:
     banner-mode: "off"
@@ -18,10 +16,14 @@ spring:
 
 
 
-#
-#    cloud:
-#      config:
-#        server:
-#          git:
-#            uri: file:///${user.home}/mic/config-repo
-#            searchPaths: '{application}'  #搜索各个以服务名命名的文件夹下的所有yml
+#spring:
+#  profiles:
+#    active: native
+#  application:
+#    name: mic-config-server
+#  cloud:
+#    config:
+#      server:
+#        native:
+#          searchLocations: file:///${user.home}/mic/config-repo
+#          searchPaths: '{application}'

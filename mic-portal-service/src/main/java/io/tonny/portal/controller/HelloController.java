@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(HelloController.class);
+
     @RequestMapping("/")
     public String index() {
         LOGGER.info("The index controller invoked!");
