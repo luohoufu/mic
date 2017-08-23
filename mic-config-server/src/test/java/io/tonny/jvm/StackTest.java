@@ -1,16 +1,14 @@
-package io.tonny.config;
+package io.tonny.jvm;
 
 /**
  *
  * java -server -XX:+PrintFlagsFinal |grep DoEscapeAnalysis
  * java -server -XX:+UnlockExperimentalVMOptions -XX:+UnlockDiagnosticVMOptions -XX:+PrintFlagsFinal Benchmark | grep ":"
  *
- * javac io/tonny/config/StatckTest.java
+ * javac io/tonny/jvm/StatckTest.java
  *
- * javac ./StackTest
- * cd ../../../
- * java -server -Xmx20m -Xms20m -XX:+DoEscapeAnalysis -XX:+PrintGC io.tonny.config.StatckTest
- * java -server -Xmx20m -Xms20m -XX:-DoEscapeAnalysis -XX:+PrintGC io.tonny.config.StatckTest
+ * java -server -Xmx20m -Xms20m -XX:+DoEscapeAnalysis -XX:+PrintGC io.tonny.jvm.StatckTest
+ * java -server -Xmx20m -Xms20m -XX:-DoEscapeAnalysis -XX:+PrintGC io.tonny.jvm.StatckTest
  * Created by luohoufu on 2017/8/5.
  */
 public class StatckTest {
