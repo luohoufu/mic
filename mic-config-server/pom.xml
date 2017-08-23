@@ -20,6 +20,11 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-config-server</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.thoughtworks</groupId>
+            <artifactId>com.thoughtworks.xstream</artifactId>
+            <version>LATEST</version>
+        </dependency>
     </dependencies>
 
 </project>

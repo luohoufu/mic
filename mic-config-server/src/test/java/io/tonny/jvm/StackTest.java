@@ -5,13 +5,13 @@ package io.tonny.jvm;
  * java -server -XX:+PrintFlagsFinal |grep DoEscapeAnalysis
  * java -server -XX:+UnlockExperimentalVMOptions -XX:+UnlockDiagnosticVMOptions -XX:+PrintFlagsFinal Benchmark | grep ":"
  *
- * javac io/tonny/jvm/StatckTest.java
- *
- * java -server -Xmx20m -Xms20m -XX:+DoEscapeAnalysis -XX:+PrintGC io.tonny.jvm.StatckTest
- * java -server -Xmx20m -Xms20m -XX:-DoEscapeAnalysis -XX:+PrintGC io.tonny.jvm.StatckTest
+ * javac io/tonny/jvm/StackTest.java
+ * java io.tonny.jvm.StackTest
+ * java -server -Xmx20m -Xms20m -XX:+DoEscapeAnalysis -XX:+PrintGC io.tonny.jvm.StackTest
+ * java -server -Xmx20m -Xms20m -XX:-DoEscapeAnalysis -XX:+PrintGC io.tonny.jvm.StackTest
  * Created by luohoufu on 2017/8/5.
  */
-public class StatckTest {
+public class StackTest {
     public static void alooc() {
         byte[] b = new byte[2];
         b[0] = 1;

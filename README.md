@@ -112,4 +112,6 @@ git checkout dev
 git commit -am '修改README.md配置'
 git push origin dev:dev
 #git push origin :dev 删除分支
+
+tar --exclude=.git -zcvf - src | split -b 3m - src.tar.gz.
 ```
